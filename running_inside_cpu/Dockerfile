@@ -11,4 +11,4 @@ ADD requirements /opt/local/dev/
 RUN ["pip", "install", "-r", "/opt/local/dev/requirements"]
 ADD cpu_spark.py /opt/local/dev/numpy/
 
-CMD ["time", "python", "/opt/local/dev/numpy/cpu_spark.py"]
+CMD ["python", "/opt/local/dev/numpy/cpu_spark.py"]
