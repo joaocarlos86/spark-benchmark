@@ -6,8 +6,12 @@ This is the first part of the benchmark, the code stress the CPU by running seve
 
 ## Instalation
 
+```
 docker build -t spark .
+```
 
 ## Usage
 
+```
 docker run --rm --name myspark spark
+```
