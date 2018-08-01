@@ -8,16 +8,17 @@ from pyspark import SparkContext
 
 number=10000000
 
-def cpu_pow(a,b):
+@vectorize(['float32(float32, float32)'], target='cuda')
+def gpu_pow(a, b):
     return a ** b
 
-def cpu_work(vec_size):
+def gpu_work(vec_size):
     a = b = np.array(np.random.sample(vec_size), dtype=np.float32)
     c = np.zeros(vec_size, dtype=np.float32)
-    c = cpu_pow(a, b)
+    c = gpu_pow(a, b)
 
-sc = SparkContext('local[2]', 'test')
+sc = SparkContext('local[50]', 'test')
 rdd = sc.parallelize(list([number]*100))
 print("Partitions", rdd.getNumPartitions())
-res = rdd.map(lambda x : cpu_work(x))
+res = rdd.map(lambda x : gpu_work(x))
 res.collect()
