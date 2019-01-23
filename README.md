@@ -4,7 +4,7 @@ This code shows how to use the CUDA SDK to improve the execution time and resour
 
 Code References: https://azure.microsoft.com/en-us/blog/accelerated-spark-on-gpu-enabled-clusters-in-azure/ and https://github.com/Azure/aztk/tree/master/aztk/node_scripts/jupyter-samples
 
-##What is Cuda?
+## What is Cuda?
 
 CUDA® is a parallel computing platform and programming model developed by NVIDIA for general computing on graphical processing units (GPUs). With CUDA, developers are able to dramatically speed up computing applications by harnessing the power of GPUs.
 
@@ -12,7 +12,7 @@ In GPU-accelerated applications, the sequential part of the workload runs on the
 
 See the [official documentation](https://developer.nvidia.com/cuda-zone)
 
-##What is Spark?
+## What is Spark?
 
 Apache Spark achieves high performance for both batch and streaming data, using a state-of-the-art DAG scheduler, a query optimizer, and a physical execution engine.
 Spark offers over 80 high-level operators that make it easy to build parallel apps. And you can use it interactively from the Scala, Python, R, and SQL shells.
@@ -20,7 +20,7 @@ Spark powers a stack of libraries including SQL and DataFrames, MLlib for machin
 
 See the [official documentation](https://spark.apache.org/)
 
-##What is Numpy?
+## What is Numpy?
 
 NumPy is the fundamental package for scientific computing with Python. It contains among other things:
 
